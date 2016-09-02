@@ -1,0 +1,21 @@
+# Edition One
+# Code is ok, but running time is too long to be accepted by lintcode.
+class Solution:
+    """
+    @param A : An integer array
+    @return : Two integer
+    """
+    def singleNumberIII(self, A):
+        # write your code here
+        l=len(A)
+        B=[]
+        D=[]
+        for x in range(l):
+          B.insert(x,0)
+          for y in range(l):
+            if A[x] == A[y]:
+              B[x]  += 1
+        C= [i for i,x in enumerate(B) if x == 1]
+        for i in C:
+          D.append(A[i])
+        return D
