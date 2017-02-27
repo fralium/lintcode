@@ -1,11 +1,12 @@
-Lt13. strStr
+/*Lt13. strStr
 
 For a given source string and a target string, you should output the first index(from 0) of target string in source string.
 
 If target does not exist in source, just return -1.
 
+*/
 
-```java
+
 class Solution {
     /**
      * Returns a index to the first occurrence of target in source,
@@ -33,4 +34,3 @@ class Solution {
         
     }
 }
-```
