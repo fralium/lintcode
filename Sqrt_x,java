@@ -1,0 +1,47 @@
+/*
+
+141. Sqrt(x)
+
+Implement int sqrt(int x).
+
+Compute and return the square root of x.
+
+
+
+*/
+class Solution {
+    /**
+     * @param x: An integer
+     * @return: The sqrt of x
+     */
+    public int sqrt(int x) {
+        // write your code here
+        boolean diff = true;
+        long n = x/2;
+        long result = 0;
+        while (diff) {
+            
+            if ((n * n - x) > 0){
+                n=n/2;
+            } else if ((n * n  - x) == 0){
+                result = n;
+                diff = false;
+                return (int) result; 
+            } else {
+                diff = false;
+            }
+        }
+        
+        diff = true;
+        while (diff){
+            
+            if ((n * n -x ) <= 0 && (( n + 1 ) * ( n + 1 ) - x) >0){
+                result = n;
+                diff = false;
+            }else{
+                n=n+1;
+            }
+        }
+        return (int) result;
+    }
+}
